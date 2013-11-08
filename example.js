@@ -4,7 +4,7 @@ var Process     = concurrency.Process;
 
 var find = new Process({
    command:"find",
-   args:["/etc"]
+   args:["/bin"]
 });
 var find2 = new Process({
    command:"find",
