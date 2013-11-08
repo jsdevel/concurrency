@@ -2,7 +2,7 @@
   "name": "concurrency",
   "version": "0.0.0",
   "description": "A way to achieve concurrency running multiple tasks",
-  "main": "index.js",
+  "main": "src/concurrency.js",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },

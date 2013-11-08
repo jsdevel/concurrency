@@ -166,6 +166,7 @@ function initialize(){
             queue[index] = "";
             attemptToRun();
         });
+        return this;
     }
 
     function isFollowing(task){
