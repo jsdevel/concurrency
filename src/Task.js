@@ -60,7 +60,7 @@ function initialize(){
     var isInitialized  = true;
     var isRunning      = false;
     var timestamp      = Date.now();
-    var id             = "[Task "+timestamp+"]";
+    var id             = "[Task "+Math.random(timestamp)+"]";
     var tasksFollowing = {};
     var followees      = [];
     var queue          = [];
@@ -74,27 +74,27 @@ function initialize(){
     //properties
     Object.defineProperty(this, 'id', {
         get:function(){return id;},
-        enumberable:true
+        enumerable:true
     });
 
     Object.defineProperty(this, 'isComplete', {
         get:function(){return isComplete;},
-        enumberable:true
+        enumerable:true
     });
 
     Object.defineProperty(this, 'isInitialized', {
         get:function(){return isInitialized;},
-        enumberable:true
+        enumerable:true
     });
 
     Object.defineProperty(this, 'isRunning', {
         get:function(){return isRunning;},
-        enumberable:true
+        enumerable:true
     });
 
     Object.defineProperty(this, 'timestamp', {
         get:function(){return timestamp;},
-        enumberable:true
+        enumerable:true
     });
 
     //methods
