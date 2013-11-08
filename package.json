@@ -1,6 +1,6 @@
 {
   "name": "concurrency",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A way to achieve concurrency running multiple tasks",
   "main": "src/concurrency.js",
   "scripts": {
