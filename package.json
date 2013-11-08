@@ -1,6 +1,6 @@
 {
   "name": "concurrency",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A way to achieve concurrency running multiple tasks",
   "main": "src/concurrency.js",
   "scripts": {
@@ -25,7 +25,12 @@
     "name": "Joseph Spencer"
   },
   "license": "Apache2.0",
-  "readme": "ERROR: No README data found!",
-  "_id": "concurrency@0.0.0",
-  "_from": "concurrency@"
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/webdriver-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsdevel/webdriver-sync/issues"
+  }
 }
