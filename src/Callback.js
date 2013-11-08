@@ -54,5 +54,4 @@ function Callback(fn){
             fn.apply(task, [yielder].concat([].slice.apply(arguments)));
         }
     });
-
 }
