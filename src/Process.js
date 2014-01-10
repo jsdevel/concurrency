@@ -107,7 +107,7 @@ function Process(config){
             }
 
             if(~command.indexOf('node ')){
-               spawnArgs[0] = spawnArgs[0].replace('node ');
+               spawnArgs[0] = spawnArgs[0].replace('node ', '');
                spawned=fork.apply(fork, spawnArgs);
             } else {
                spawned=spawn.apply(spawn, spawnArgs);
