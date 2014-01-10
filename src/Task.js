@@ -141,30 +141,32 @@ function initialize(){
         enumerable:true
     });
 
-    function follows(task){
-        var index;
-        if(!(task instanceof Task)){
+    function follows(){
+        [].slice.call(arguments).forEach(function(task){
+          var index;
+          if(!(task instanceof Task)){
             throw new Error("task must be an isntance of Task");
-        }
-        if(!task.isInitialized){
+          }
+          if(!task.isInitialized){
             throw new Error("tasks must be initialized to follow them");
-        }
-        if(task in tasksFollowing){
+          }
+          if(task in tasksFollowing){
             throw new Error("tasks may only be followed once by this task");
-        };
-        if(task.isComplete)return;
-        if(isRunning){
+          };
+          if(task.isComplete)return;
+          if(isRunning){
             throw new Error("Can't add dependencies.  The task is running.");
-        }
-        if(isComplete){
+          }
+          if(isComplete){
             throw new Error("Can't add dependencies.  The task is complete.");
-        }
-        tasksFollowing[task] = task;
-        index = queue.push(task.id) - 1;
-        followees.push(task);
-        task.on('complete', function(){
+          }
+          tasksFollowing[task] = task;
+          index = queue.push(task.id) - 1;
+          followees.push(task);
+          task.on('complete', function(){
             queue[index] = "";
             attemptToRun();
+          });
         });
         return this;
     }
