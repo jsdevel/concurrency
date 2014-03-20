@@ -16,7 +16,7 @@
 
 
 module.exports={
-    Callback:require('./Callback'),
-    Process:require('./Process'),
-    Task:require('./Task')
+  Callback:require('./Callback'),
+  Process:require('./Process'),
+  Task:require('./Task')
 };
